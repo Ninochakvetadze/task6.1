@@ -1,7 +1,17 @@
+body {
+
+	background: url(images/halloween.jpg) no-repeat   cover;
+	height: vh;
+	width: 100vw;
+	overflow: hidden;
+	background-color: darkred;
+}
+
 .bat {
 	width: 8%;
-	margin-top: 20px;
-	margin-left: 15px;
+	position: absolute;
+	top: 100px;
+	left: 100px;
 }
 p {
 	font-size: 42px;
@@ -14,21 +24,32 @@ p {
 }
 .ghost {
 	width: 10%;
-	margin-top: 250px;
-	margin-left: 950px;
-	position: relative;
-	animation: mymove 5s infinite;
+	left: 1000px;
+	position: absolute;
+	animation: mymove 7s infinite;
 }
 @keyframes mymove {
-	from {top: 0px;}
-	to {top: 150px;}
+	0% {bottom: 0px;}
+	45% {bottom: 200px;}
+	75% {bottom: 90px}
+	100% {bottom: 150px;}
 }
+
 .witch {
 	width: 15%;
-	margin-top: 150px;
-	margin-left: 1150px;
+	top: 350px;
+	left: 1000px;
 	transform: rotate(15deg);
+	position: relative;
+	animation: fly 10s infinite;
 }
+
+@keyframes fly {
+	from {left: 1800px}
+	to {left: -300px}
+}
+
+
 .cat {
 	width: 7%;
 }
